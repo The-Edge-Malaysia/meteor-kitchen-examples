@@ -1,0 +1,10 @@
+{
+  "application": {
+    "copy_files": [
+      {
+        "source": "",
+        "dest": ""
+      }
+    ]
+  }
+}

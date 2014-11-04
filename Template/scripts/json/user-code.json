@@ -1,0 +1,8 @@
+{
+  "application":{
+    "on_user_created_code": "",
+    "on_user_logged_code": "",
+    "on_user_created_source_file": "",
+    "on_user_logged_source_file": ""
+  }
+}

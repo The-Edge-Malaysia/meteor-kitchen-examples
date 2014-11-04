@@ -1,0 +1,10 @@
+{
+  "application":{
+    "title": "HBWD",
+    "meta_title": "HBWD Field Reporting",
+    "meta_description": "",
+    "template": "",
+    "theme": "bootswatch-flatly",
+    "footer_text": ""
+  }
+}

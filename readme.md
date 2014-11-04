@@ -1,0 +1,1 @@
+## A repository to store scripts, templates, snippets, etc, related to [Meteor Kitchen](http://www.meteorkitchen.com)

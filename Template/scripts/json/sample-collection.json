@@ -1,0 +1,29 @@
+{
+  "application": {
+    "collections": [
+      {
+        "name": "test",
+        "fields": [],
+        "owner_field": "",
+        "read_owner_only": false,
+        "write_owner_only": false,
+        "roles_allowed_to_read": [ ],
+        "roles_allowed_to_insert": [ ],
+        "roles_allowed_to_update": [ ],
+        "roles_allowed_to_delete": [ ],
+        "before_insert_code": "",
+        "before_update_code": "",
+        "before_remove_code": "",
+        "after_insert_code": "",
+        "after_update_code": "",
+        "after_remove_code": "",
+        "before_insert_source_file": "",
+        "before_update_source_file": "",
+        "before_remove_source_file": "",
+        "after_insert_source_file": "",
+        "after_update_source_file": "",
+        "after_remove_source_file": ""
+      }
+    ]
+  }
+}
