@@ -1,0 +1,12 @@
+collections:
+  -
+    name: "customers"
+    roles_allowed_to_read: []
+    roles_allowed_to_insert:
+      - "admin"
+      - "manager"
+    roles_allowed_to_update:
+      - "admin"
+      - "manager"
+    roles_allowed_to_delete:
+      - "admin"

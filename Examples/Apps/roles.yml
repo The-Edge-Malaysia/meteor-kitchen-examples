@@ -1,0 +1,78 @@
+---
+  application:
+    title: "Hello world!"
+    roles:
+      - "admin"
+      - "user"
+    default_role: "user"
+    private_zone:
+      pages:
+        -
+          name: "home_private"
+          title: "Private home page"
+        -
+          name: "admin_panel"
+          title: "Admin panel"
+          roles:
+            - "admin"
+        -
+          name: "logout"
+          template: "logout.html"
+          action_code: "App.logout();"
+      menus:
+        -
+          name: "left_menu"
+          class: "nav navbar-nav"
+          dest_selector: "#menu"
+          items:
+            -
+              title: "Home"
+              route: "home_private"
+            -
+              title: "Admin"
+              route: "admin_panel"
+        -
+          name: "right_menu"
+          class: "nav navbar-nav navbar-right"
+          dest_selector: "#menu"
+          items:
+            -
+              title: "Logout"
+              route: "logout"
+    public_zone:
+      pages:
+        -
+          name: "home_public"
+          title: "Public home page"
+        -
+          name: "login"
+          template: "login.html"
+        -
+          name: "register"
+          template: "register.html"
+        -
+          name: "forgot_password"
+          template: "forgot_password.html"
+        -
+          name: "reset_password"
+          template: "reset_password.html"
+      menus:
+        -
+          name: "left_menu"
+          class: "nav navbar-nav"
+          dest_selector: "#menu"
+          items:
+            -
+              title: "Home"
+              route: "home_public"
+        -
+          name: "right_menu"
+          class: "nav navbar-nav navbar-right"
+          dest_selector: "#menu"
+          items:
+            -
+              title: "Register"
+              route: "register"
+            -
+              title: "Login"
+              route: "login"

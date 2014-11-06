@@ -1,0 +1,71 @@
+---
+application:
+  collections:
+    -
+      name: test
+      fields:
+        -
+          default: ""
+          display_helper: ""
+          exportable: true
+          format: ""
+          input: ""
+          input_items:
+            -
+              title: ""
+              value: ""
+          lookup_field: ""
+          lookup_key: ""
+          lookup_query:
+            collection: ""
+            filter: {}
+            find_one: false
+            name: ""
+            options: {}
+          name: field1
+          required: false
+          searchable: true
+          show_in_dataview: true
+          show_in_insert_form: true
+          show_in_read_only_form: true
+          show_in_update_form: true
+          sortable: true
+          title: ""
+          type: ""
+
+
+
+        - # Example of normal input field
+          exportable: true
+          name: office
+          required: true
+          title: Office
+        - # Example of lookup field
+          name: position
+          required: true
+          title: Position
+          exportable: true
+          input: select
+          lookup_field: title
+          lookup_key: title
+          lookup_query:
+            collection: staff_positions
+            find_one: false
+            name: staff_positions_lookup
+
+        - # Example of radio field
+          name: crew
+          required: true
+          title: Crew
+          exportable: true
+          input: radio
+          input_items:
+            -
+              title: "Office Crew Member"
+              value: office
+            -
+              title: "Shop Crew Member"
+              value: shop
+            -
+              title: "Field Crew Member"
+              value: field

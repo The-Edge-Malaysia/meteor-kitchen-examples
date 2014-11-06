@@ -1,0 +1,118 @@
+--- # More examples below this one #
+  application:
+    private_zone:
+      pages:
+        -
+          name: "customers"
+          components:
+            -
+              name: ""
+              type: "form"
+              custom_template: ""
+              dest_selector: ""
+              dest_position: ""
+              class: ""
+              title: ""
+              query:
+                name: ""
+                collection: ""
+                find_one: false
+                filter: {}
+                options: {}
+              components: []
+              template_rendered_code: ""
+              mode: ""
+              layout: ""
+              submit_route: ""
+              cancel_route: ""
+              close_route: ""
+              back_route: ""
+              submit_route_params: []
+              cancel_route_params: []
+              close_route_params: []
+              back_route_params: []
+              hidden_fields:
+                -
+                  name: ""
+                  value: ""
+              fields:
+                -
+                  name: ""
+                  title: ""
+                  type: ""
+                  default: ""
+                  required: false
+                  searchable: true
+                  sortable: true
+                  exportable: true
+                  format: ""
+                  input: ""
+                  input_items:
+                    -
+                      value: ""
+                      title: ""
+                  lookup_query:
+                    name: ""
+                    collection: ""
+                    find_one: false
+                    filter: {}
+                    options: {}
+                  lookup_key: ""
+                  lookup_field: ""
+                  display_helper: ""
+                  show_in_dataview: true
+                  show_in_insert_form: true
+                  show_in_update_form: true
+                  show_in_read_only_form: true
+
+
+      pages:
+        -
+          name: "insert"
+          components:
+            -
+              name: "insert_form"
+              type: "form"
+              mode: "insert"
+              title: "New customer"
+              query:
+                name: "customers_empty"
+                collection: "customers"
+                filter:
+                  _id: null
+              submit_route: "customers"
+              cancel_route: "customers"
+        -
+          name: "details"
+          route_params:
+            - "customerId"
+          components:
+            -
+              name: "details_form"
+              type: "form"
+              mode: "read_only"
+              title: "Details"
+              query:
+                name: "customer"
+                collection: "customers"
+                filter:
+                  _id: ":customerId"
+              close_route: "customers"
+              back_route: "customers"
+        -
+          name: "edit"
+          route_params:
+            - "customerId"
+          components:
+            -
+              name: "edit_form"
+              type: "form"
+              mode: "update"
+              title: "Edit customer"
+              submit_route: "customers"
+              cancel_route: "customers"
+              query:
+                name: "customer"
+                collection: "customers"
+                filter:
+                  _id: ":customerId"

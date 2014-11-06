@@ -1,0 +1,26 @@
+---
+  name: "home"
+  title: "Home page"
+  components:
+    -
+      name: "jumbo"
+      type: "jumbotron"
+      custom_template: ""
+      dest_selector: ""
+      dest_position: ""
+      class: ""
+      image_url: ""
+      title: "Hello world!"
+      text: "This is just an example"
+      button_title: "Learn more"
+      button_route: "about"
+      button_route_params: []
+      button_class: ""
+      query:
+        name: ""
+        collection: ""
+        find_one: false
+        filter: {}
+        options: {}
+      components: []
+      template_rendered_code: ""

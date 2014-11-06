@@ -1,0 +1,5 @@
+---
+  application:
+    packages:
+      meteor:
+        - "datariot:ganalytics"

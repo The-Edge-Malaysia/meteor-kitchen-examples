@@ -1,0 +1,12 @@
+---
+name: home
+title: "Home page"
+pages:
+  -
+    title: "Home - Subpage 1"
+    name: subpage_1
+    pages:
+      -
+        title: "Home - Subpage 1 - Sub-Sub page 1"
+        name: subsub_1
+        pages: []

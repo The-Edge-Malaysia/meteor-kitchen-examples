@@ -1,0 +1,66 @@
+---
+  name: "home"
+  title: "Home page"
+  components:
+    -
+      name: "view"
+      type: "dataview"
+      title: "Customers"
+      text_if_empty: "No customers :("
+      query:
+        name: "customers"
+        collection: "customers"
+        find_one: false
+        filter: {}
+        options: {}
+      insert_route: "customers.insert"
+      edit_route: "customers.edit"
+      edit_route_params:
+        -
+          name: "customerId"
+          value: "this._id"
+      details_route: "customers.details"
+      details_route_params:
+        -
+          name: "customerId"
+          value: "this._id"
+
+
+      custom_template: ""
+      dest_selector: ""
+      dest_position: ""
+      class: ""
+      components: []
+      template_rendered_code: ""
+      text_if_not_found: ""
+      fields:
+        -
+          name: ""
+          title: ""
+          type: ""
+          default: ""
+          required: false
+          searchable: true
+          sortable: true
+          exportable: true
+          format: ""
+          input: ""
+          input_items: []
+          lookup_query:
+            name: ""
+            collection: ""
+            find_one: false
+            filter: {}
+            options: {}
+          lookup_key: ""
+          lookup_field: ""
+          display_helper: ""
+          show_in_dataview: true
+          show_in_insert_form: true
+          show_in_update_form: true
+          show_in_read_only_form: true
+
+      delete_route: ""
+      insert_route_params: []
+      delete_route_params: []
+      views: []

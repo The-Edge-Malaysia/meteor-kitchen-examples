@@ -1,0 +1,11 @@
+---
+  application:
+    title: "Hello world!"
+    free_zone:
+      pages: []
+      menus: []
+  server_side_routes:
+    -
+      name: "example"
+      path: "/example"
+      source_file: "path_to_source_file.js"

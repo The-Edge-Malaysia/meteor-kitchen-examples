@@ -1,0 +1,7 @@
+private_zone:
+  pages:
+    -
+      name: "admin_panel"
+      title: "Admin panel"
+      roles:
+        - "admin"

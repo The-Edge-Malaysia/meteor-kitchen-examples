@@ -1,0 +1,7 @@
+---
+  application:
+    title: "Hello world!"
+    roles:
+      - "admin"
+      - "user"
+    default_role: "user"
