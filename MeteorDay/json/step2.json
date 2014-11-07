@@ -1,0 +1,44 @@
+{
+  "application": {
+    "meta_description": "this is an awesome description",
+    "meta_title": "meteor chicago",
+    "free_zone": {
+      "menus": [
+        {
+          "items": [
+            {
+              "route": "home",
+              "title": "Home page"
+            },
+            {
+              "route": "about",
+              "title": "About"
+            }
+          ],
+          "name": "main_menu",
+          "class": "nav navbar-nav"
+        }
+      ],
+      "pages": [
+        {
+          "name": "home",
+          "components": [
+            {
+              "button_title": "About Page &raquo;",
+              "name": "home_jumbotron",
+              "title": "Welcome to Meteor Chicago",
+              "text": "<b>This <a href=\"https://www.meteor.com\" target=\"_blank\">Meteor</a> application is made with <a href=\"http://www.meteorkitchen.com\" target=\"_blank\">meteor-kitchen</a> without manual coding.</b><br />It demonstrates how to create application with login, register and forgot password functions.<br />Source code (input file for generator) is <a href=\"https://github.com/perak/kitchen-examples/tree/master/example-accounts\" target=\"_blank\">here</a>.",
+              "button_route": "about",
+              "type": "jumbotron"
+            }
+          ]
+        },
+        {
+          "name": "about",
+          "title": "About Meteor Chicago"
+        }
+      ]
+    },
+    "title": "MeteorChicago"
+  }
+}

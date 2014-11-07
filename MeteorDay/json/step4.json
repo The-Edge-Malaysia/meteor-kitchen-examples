@@ -1,0 +1,273 @@
+{
+  "application": {
+    "meta_description": "this is an awesome description",
+    "meta_title": "meteor chicago",
+    "collections": [
+      {
+        "fields": [
+          {
+            "required": true,
+            "exportable": true,
+            "name": "name",
+            "title": "Name"
+          },
+          {
+            "default": "-",
+            "exportable": true,
+            "name": "phone",
+            "title": "Phone"
+          },
+          {
+            "type": "email",
+            "exportable": true,
+            "name": "email",
+            "title": "E-mail"
+          },
+          {
+            "input": "textarea",
+            "exportable": true,
+            "name": "note",
+            "title": "Note"
+          }
+        ],
+        "name": "customers"
+      }
+    ],
+    "title": "MeteorChicago",
+    "public_zone": {
+      "menus": [
+        {
+          "items": [
+            {
+              "route": "home_public",
+              "title": "Home"
+            }
+          ],
+          "class": "nav navbar-nav",
+          "dest_selector": "#menu",
+          "name": "left_menu"
+        },
+        {
+          "items": [
+            {
+              "route": "register",
+              "title": "Register"
+            },
+            {
+              "route": "login",
+              "title": "Login"
+            }
+          ],
+          "class": "nav navbar-nav navbar-right",
+          "dest_selector": "#menu",
+          "name": "right_menu"
+        }
+      ],
+      "pages": [
+        {
+          "name": "home",
+          "components": [
+            {
+              "button_title": "Continue &raquo;",
+              "name": "home_jumbotron",
+              "title": "Welcome to Meteor Chicago",
+              "text": "<b>This <a href=\"https://www.meteor.com\" target=\"_blank\">Meteor</a> application is made with <a href=\"http://www.meteorkitchen.com\" target=\"_blank\">meteor-kitchen</a> without manual coding.</b><br />It demonstrates how to create application with login, register and forgot password functions.<br />Source code (input file for generator) is <a href=\"https://github.com/perak/kitchen-examples/tree/master/example-accounts\" target=\"_blank\">here</a>.",
+              "button_route": "login",
+              "type": "jumbotron"
+            }
+          ]
+        },
+        {
+          "name": "about",
+          "title": "About Meteor Chicago"
+        },
+        {
+          "name": "login",
+          "template": "login.html"
+        },
+        {
+          "name": "register",
+          "template": "register.html"
+        },
+        {
+          "name": "forgot_password",
+          "template": "forgot_password.html"
+        },
+        {
+          "name": "reset_password",
+          "template": "reset_password.html"
+        }
+      ]
+    },
+    "private_zone": {
+      "menus": [
+        {
+          "items": [
+            {
+              "route": "home_private",
+              "title": "Home"
+            },
+            {
+              "route": "customers",
+              "title": "Customers"
+            }
+          ],
+          "class": "nav navbar-nav",
+          "dest_selector": "#menu",
+          "name": "left_menu"
+        },
+        {
+          "items": [
+            {
+              "items": [
+                {
+                  "route": "user_settings",
+                  "title": "Settings"
+                },
+                {
+                  "route": "logout",
+                  "title": "Logout"
+                }
+              ],
+              "title": "{{userEmail}}"
+            }
+          ],
+          "class": "nav navbar-nav navbar-right",
+          "dest_selector": "#menu",
+          "name": "right_menu"
+        }
+      ],
+      "pages": [
+        {
+          "name": "home_private",
+          "title": "Welcome {{userFullName}}!"
+        },
+        {
+          "menus": [
+            {
+              "items": [
+                {
+                  "route": "user_settings.change_pass",
+                  "title": "Change password"
+                }
+              ],
+              "name": "side_menu",
+              "class": "nav nav-stacked nav-pills"
+            }
+          ],
+          "name": "user_settings",
+          "pages": [
+            {
+              "name": "change_pass",
+              "template": "change_pass.html"
+            }
+          ]
+        },
+        {
+          "action_code": "App.logout();",
+          "name": "logout",
+          "template": "logout.html"
+        },
+        {
+          "name": "customers",
+          "components": [
+            {
+              "details_route_params": [
+                {
+                  "name": "customerId",
+                  "value": "this._id"
+                }
+              ],
+              "text_if_empty": "No customers :(",
+              "title": "Customers",
+              "details_route": "customers.details",
+              "edit_route": "customers.edit",
+              "insert_route": "customers.insert",
+              "edit_route_params": [
+                {
+                  "name": "customerId",
+                  "value": "this._id"
+                }
+              ],
+              "query": {
+                "filter": {},
+                "name": "customers",
+                "collection": "customers"
+              },
+              "type": "dataview",
+              "name": "view"
+            }
+          ],
+          "pages": [
+            {
+              "name": "insert",
+              "components": [
+                {
+                  "cancel_route": "customers",
+                  "name": "insert_form",
+                  "submit_route": "customers",
+                  "title": "New customer",
+                  "query": {
+                    "filter": {
+                      "_id": null
+                    },
+                    "name": "customers_empty",
+                    "collection": "customers"
+                  },
+                  "type": "form",
+                  "mode": "insert"
+                }
+              ]
+            },
+            {
+              "route_params": [
+                "customerId"
+              ],
+              "name": "details",
+              "components": [
+                {
+                  "back_route": "customers",
+                  "name": "details_form",
+                  "title": "Details",
+                  "query": {
+                    "filter": {
+                      "_id": ":customerId"
+                    },
+                    "name": "customer",
+                    "collection": "customers"
+                  },
+                  "type": "form",
+                  "close_route": "customers",
+                  "mode": "read_only"
+                }
+              ]
+            },
+            {
+              "route_params": [
+                "customerId"
+              ],
+              "name": "edit",
+              "components": [
+                {
+                  "cancel_route": "customers",
+                  "name": "edit_form",
+                  "submit_route": "customers",
+                  "title": "Edit customer",
+                  "query": {
+                    "filter": {
+                      "_id": ":customerId"
+                    },
+                    "name": "customer",
+                    "collection": "customers"
+                  },
+                  "type": "form",
+                  "mode": "update"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

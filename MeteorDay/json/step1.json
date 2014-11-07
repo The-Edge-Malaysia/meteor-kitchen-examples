@@ -1,0 +1,35 @@
+{
+  "application": {
+    "meta_description": "this is an awesome description",
+    "meta_title": "meteor chicago",
+    "free_zone": {
+      "menus": [
+        {
+          "items": [
+            {
+              "route": "home",
+              "title": "Home page"
+            },
+            {
+              "route": "about",
+              "title": "About"
+            }
+          ],
+          "name": "main_menu",
+          "class": "nav navbar-nav"
+        }
+      ],
+      "pages": [
+        {
+          "name": "home",
+          "title": "Welcome to Meteor Chicago"
+        },
+        {
+          "name": "about",
+          "title": "About Meteor Chicago"
+        }
+      ]
+    },
+    "title": "MeteorChicago"
+  }
+}

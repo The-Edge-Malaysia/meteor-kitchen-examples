@@ -1,0 +1,24 @@
+---
+  application:
+    title: "MeteorChicago"
+    meta_title: "meteor chicago"
+    meta_description: "this is an awesome description"
+    free_zone:
+      pages:
+        -
+          name: "home"
+          title: "Welcome to Meteor Chicago"
+        -
+          name: "about"
+          title: "About Meteor Chicago"
+      menus:
+        -
+          name: "main_menu"
+          class: "nav navbar-nav"
+          items:
+            -
+              title: "Home page"
+              route: "home"
+            -
+              title: "About"
+              route: "about"
