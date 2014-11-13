@@ -1,0 +1,30 @@
+<template name="Home">
+	<div class="container" id="content">
+		<h2 id="page_title">
+			Plugins example
+		</h2>
+<p>
+	<strong>
+		Hello! I am example plugin No.1:
+	</strong>
+	just a static HTML but I am pretty!
+</p>
+		{{> ExamplePlugin2}}
+	</div>
+</template>
+
+<template name="ExamplePlugin2">
+	<p>
+		<strong>
+			Hello! I am example plugin No.2:
+		</strong>
+		template with events
+		<button class="btn btn-danger">
+			Click me!
+			<span class="badge">
+				{{clickCounter}}
+			</span>
+		</button>
+	</p>
+</template>
+

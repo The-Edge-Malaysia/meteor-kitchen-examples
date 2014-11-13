@@ -27,7 +27,7 @@
                 -
                   name: "lorem_ipsum"
                   type: "markdown"
-                  source_file: "files/lorem_ipsum1.md"
+                  source_file: "subpages_files/lorem_ipsum1.md"
             -
               name: "sub_page_b"
               title: "Sub-page B"
@@ -35,7 +35,7 @@
                 -
                   name: "lorem_ipsum"
                   type: "markdown"
-                  source_file: "files/lorem_ipsum2.md"
+                  source_file: "subpages_files/lorem_ipsum2.md"
               pages:
                 -
                   name: "sub_page_b_1"
@@ -44,7 +44,7 @@
                     -
                       name: "lorem_ipsum"
                       type: "markdown"
-                      source_file: "files/lorem_ipsum3.md"
+                      source_file: "subpages_files/lorem_ipsum3.md"
                 -
                   name: "sub_page_b_2"
                   title: "Sub-page B-2"
@@ -52,7 +52,7 @@
                     -
                       name: "lorem_ipsum"
                       type: "markdown"
-                      source_file: "files/lorem_ipsum4.md"
+                      source_file: "subpages_files/lorem_ipsum4.md"
               menus:
                 -
                   name: "side_menu"
